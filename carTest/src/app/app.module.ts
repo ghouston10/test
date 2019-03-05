@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { CarService } from './car.service';
+import { GroupByPipe } from './group-by.pipe';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GroupByPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ CarService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
